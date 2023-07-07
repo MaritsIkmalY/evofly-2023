@@ -11,9 +11,9 @@ return new class extends Migration
         Schema::create('webinars', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->text('description');
             $table->string('type');
             $table->string('image')->nullable();
-            $table->text('body');
             $table->timestamps();
         });
     }

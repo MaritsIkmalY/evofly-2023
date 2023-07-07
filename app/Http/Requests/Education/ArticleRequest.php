@@ -15,7 +15,19 @@ class ArticleRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'image' => 'mimes:pdf,png,jpg,jpeg',
+            'title' => 'required',
+            'body' => 'required',
+            'author' => 'required'
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'title.required' => 'Judul artikel harus diisi',
+            'body.required' => 'Isi artikel harus diisi',
+            'author.required' => 'Penulis artikel harus diisi'
         ];
     }
 }

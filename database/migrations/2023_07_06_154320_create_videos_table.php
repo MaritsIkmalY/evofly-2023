@@ -13,11 +13,11 @@ return new class extends Migration
             $table->string('title');
             $table->string('description');
             $table->string('url');
-            $table->string('thumbnail')->nullable();
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
-    
+
     public function down(): void
     {
         Schema::dropIfExists('videos');
